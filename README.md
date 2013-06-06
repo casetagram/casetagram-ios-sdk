@@ -23,16 +23,21 @@ Integrate with the SDK
 ----------------------
 
 1. Import the `CasetagramSDK.h` header file:
+
 ```
 	#import <CasetagramSDK/CasetagramSDK.h>
 ```
+
 2. Configure with your client id and client secret, also specify your redirect URI if you are going to share your client id with your web application. Otherwise just use `myapp://redirect` as follows:
+
 ```
 	[CTGManager setClientID:@"MyAppClientIDxxxxxxx"];
 	[CTGManager setClientSecret:@"MyAppClientSecretxxxxxxxxxxxxxxxxxxxxxxx"];
 	[CTGManager setRedirectURI:@"myapp://redirect"];
 ```
+
 3. Implement the `CasetagramSDKDelegate` protocol methods:  
+
 ```
 	- (void)casetagramSDKOrderCompleted
 	{
@@ -43,19 +48,27 @@ Integrate with the SDK
 		[self dismissModalViewControllerAnimated:YES];
 	}
 ```
+
 4. And assign your view controller as a delegate:
+
 ```
 	[CTGManager setDelegate:self];
 ```
+
 5. If you wish, you can optionally disable the move and scale page:
+
 ```
 	[CTGManager setSkipMoveAndScale:YES];
 ```
+
 6. Pass the image to the SDK:
+
 ```
 	[CTGManager setImage:[UIImage imageNamed:@"photo.jpg"]];
 ```
+
 7. Finally present the CasetagramViewController:
+
 ```
 	UIViewController *vc = [CTGManager newCasetagramViewController];
 	[self presentModalViewController:vc animated:YES];
