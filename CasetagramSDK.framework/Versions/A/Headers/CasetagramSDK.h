@@ -9,10 +9,3 @@
 #import <Foundation/Foundation.h>
 
 #import <CasetagramSDK/CasetagramSDKManager.h>
-
-#import <CasetagramSDK/CTGDevice.h>
-#import <CasetagramSDK/CTGItemOption.h>
-#import <CasetagramSDK/CTGDesignLayout.h>
-#import <CasetagramSDK/CTGLayoutContainer.h>
-#import <CasetagramSDK/CTGCountry.h>
-#import <CasetagramSDK/CTGCountryState.h>
