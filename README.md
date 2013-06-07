@@ -11,9 +11,12 @@ Add the SDK to your Xcode project
 1. Drag both `CasetagramSDK.framework` and `CasetagramSDK.bundle` to your project.
 	![sdkinstall_step1.png](http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step1.png)
 	![sdkinstall_step2.png](http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step2.png)
+	
 2. Verify that `CasetagramSDK.framework` appears in the "Link Binary With Libraries" section in your target's Build Phases. If it didn't, you can add it by dragging the `CasetagramSDK.framework` from your Project Navigator to the "Link Binary With Libraries" section.
+	
 3. Verify that `CasetagramSDK.bundle` appears in the "Copy Bundle Resources" section in your target's Build Phases. If it didn't, you can add it by dragging the `CasetagramSDK.bundle` from your Project Navigator to the "Copy Bundle Resources" section.
 	![sdkinstall_step3.png](http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step3.png)
+	
 4. Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:  
     * CoreImage.framework
 	* ImageIO.framework
@@ -22,9 +25,12 @@ Add the SDK to your Xcode project
 	* QuartzCore.framework
 	* Social.framework
 	* Twitter.framework
+	
 	![sdkinstall_step4.png](http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step4.png)
+	
 5. If you want to have your app works on iOS 5.0, you should set `Social.framework` as *optional*.
 	![sdkinstall_step5.png](http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step5.png)
+	
 6. That's it!
 
 Integrate with the SDK
@@ -88,3 +94,19 @@ Requirements
 * Xcode 4.6 and iOS SDK 5.0 or above
 * iPhone, iPad and iOS Simulator are supported
 * iOS 5.0 or above, retina display preferred
+
+Sample Code
+-----------
+
+We have prepared a [sample Xcode project](https://github.com/casetagram/casetagram-ios-sdk-sample) that integrated with the Casetagram iOS SDK. 
+
+Support
+-------
+
+If you have any problem regarding the Casetagram iOS SDK, feel free to contact us at hello@casetagram.com
+
+Issues?
+-------
+
+You may submit issues on github: https://github.com/casetagram/casetagram-ios-sdk/issues
+
