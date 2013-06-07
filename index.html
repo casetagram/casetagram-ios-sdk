@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Casetagram-ios-sdk by casetagram</title>
+    <title>Casetagram iOS SDK by casetagram</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,8 +17,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Casetagram-ios-sdk</h1>
-        <p>Casetagram iOS SDK</p>
+        <h1>Casetagram iOS SDK</h1>
+        <p>create custom cases right from your app</p>
         <p class="view"><a href="https://github.com/casetagram/casetagram-ios-sdk">View the Project on GitHub <small>casetagram/casetagram-ios-sdk</small></a></p>
         <ul>
           <li><a href="https://github.com/casetagram/casetagram-ios-sdk/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -38,29 +38,28 @@
 <a name="add-the-sdk-to-your-xcode-project" class="anchor" href="#add-the-sdk-to-your-xcode-project"><span class="octicon octicon-link"></span></a>Add the SDK to your Xcode project</h2>
 
 <ol>
-<li>Drag both <code>CasetagramSDK.framework</code> and <code>CasetagramSDK.bundle</code> to your project.
-<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step1.png" alt="sdkinstall_step1.png"><img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step2.png" alt="sdkinstall_step2.png">
-</li>
-<li>Verify that <code>CasetagramSDK.framework</code> appears in the "Link Binary With Libraries" section in your target's Build Phases. If it didn't, you can add it by dragging the <code>CasetagramSDK.framework</code> from your Project Navigator to the "Link Binary With Libraries" section.</li>
-<li>Verify that <code>CasetagramSDK.bundle</code> appears in the "Copy Bundle Resources" section in your target's Build Phases. If it didn't, you can add it by dragging the <code>CasetagramSDK.bundle</code> from your Project Navigator to the "Copy Bundle Resources" section.
-<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step3.png" alt="sdkinstall_step3.png">
-</li>
-<li>Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:<br><ul>
+<li><p>Drag both <code>CasetagramSDK.framework</code> and <code>CasetagramSDK.bundle</code> to your project.
+<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step1.png" alt="sdkinstall_step1.png"><img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step2.png" alt="sdkinstall_step2.png"></p></li>
+<li><p>Verify that <code>CasetagramSDK.framework</code> appears in the "Link Binary With Libraries" section in your target's Build Phases. If it didn't, you can add it by dragging the <code>CasetagramSDK.framework</code> from your Project Navigator to the "Link Binary With Libraries" section.</p></li>
+<li><p>Verify that <code>CasetagramSDK.bundle</code> appears in the "Copy Bundle Resources" section in your target's Build Phases. If it didn't, you can add it by dragging the <code>CasetagramSDK.bundle</code> from your Project Navigator to the "Copy Bundle Resources" section.
+<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step3.png" alt="sdkinstall_step3.png"></p></li>
+<li>
+<p>Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:  </p>
+
+<ul>
 <li>CoreImage.framework</li>
 <li>ImageIO.framework</li>
 <li>MessageUI.framework</li>
 <li>MobileCoreServices.framework</li>
 <li>QuartzCore.framework</li>
 <li>Social.framework</li>
-<li>Twitter.framework
-<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step4.png" alt="sdkinstall_step4.png">
-</li>
+<li>Twitter.framework</li>
 </ul>
+<p><img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step4.png" alt="sdkinstall_step4.png"></p>
 </li>
-<li>If you want to have your app works on iOS 5.0, you should set <code>Social.framework</code> as <em>optional</em>.
-<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step5.png" alt="sdkinstall_step5.png">
-</li>
-<li>That's it!</li>
+<li><p>If you want to have your app works on iOS 5.0, you should set <code>Social.framework</code> as <em>optional</em>.
+<img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step5.png" alt="sdkinstall_step5.png"></p></li>
+<li><p>That's it!</p></li>
 </ol><h2>
 <a name="integrate-with-the-sdk" class="anchor" href="#integrate-with-the-sdk"><span class="octicon octicon-link"></span></a>Integrate with the SDK</h2>
 
@@ -124,7 +123,20 @@
 <li>Xcode 4.6 and iOS SDK 5.0 or above</li>
 <li>iPhone, iPad and iOS Simulator are supported</li>
 <li>iOS 5.0 or above, retina display preferred</li>
-</ul>
+</ul><h2>
+<a name="sample-code" class="anchor" href="#sample-code"><span class="octicon octicon-link"></span></a>Sample Code</h2>
+
+<p>We have prepared a <a href="https://github.com/casetagram/casetagram-ios-sdk-sample">sample Xcode project</a> that integrated with the Casetagram iOS SDK. </p>
+
+<h2>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
+
+<p>If you have any problem regarding the Casetagram iOS SDK, feel free to contact us at <a href="mailto:hello@casetagram.com">hello@casetagram.com</a></p>
+
+<h2>
+<a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues?</h2>
+
+<p>You may submit issues on github: <a href="https://github.com/casetagram/casetagram-ios-sdk/issues">https://github.com/casetagram/casetagram-ios-sdk/issues</a></p>
       </section>
     </div>
     <footer>
