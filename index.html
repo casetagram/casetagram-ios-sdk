@@ -40,8 +40,8 @@
 <ol>
 <li><p>Drag both <code>CasetagramSDK.framework</code> and <code>CasetagramSDK.bundle</code> to your project.
 <img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step1.png" alt="sdkinstall_step1.png"><img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step2.png" alt="sdkinstall_step2.png"></p></li>
-<li><p>Verify that <code>CasetagramSDK.framework</code> appears in the "Link Binary With Libraries" section in your target's Build Phases. If it didn't, you can add it by dragging the <code>CasetagramSDK.framework</code> from your Project Navigator to the "Link Binary With Libraries" section.</p></li>
-<li><p>Verify that <code>CasetagramSDK.bundle</code> appears in the "Copy Bundle Resources" section in your target's Build Phases. If it didn't, you can add it by dragging the <code>CasetagramSDK.bundle</code> from your Project Navigator to the "Copy Bundle Resources" section.
+<li><p>Verify that <code>CasetagramSDK.framework</code> appears in the "Link Binary With Libraries" section in your target's Build Phases. If it does not, you can add it by dragging the <code>CasetagramSDK.framework</code> from your Project Navigator to the "Link Binary With Libraries" section.</p></li>
+<li><p>Verify that <code>CasetagramSDK.bundle</code> appears in the "Copy Bundle Resources" section in your target's Build Phases. If it does not, you can add it by dragging the <code>CasetagramSDK.bundle</code> from your Project Navigator to the "Copy Bundle Resources" section.
 <img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step3.png" alt="sdkinstall_step3.png"></p></li>
 <li>
 <p>Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:  </p>
@@ -53,6 +53,7 @@
 <li>MobileCoreServices.framework</li>
 <li>QuartzCore.framework</li>
 <li>Social.framework</li>
+<li>SystemConfiguration.framework</li>
 <li>Twitter.framework</li>
 </ul>
 <p><img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step4.png" alt="sdkinstall_step4.png"></p>
@@ -71,7 +72,7 @@
 </code></pre>
 </li>
 <li>
-<p>Configure with your client id and client secret, also specify your redirect URI if you are going to share your client id with your web application. Otherwise just use <code>myapp://redirect</code> as follows:</p>
+<p>Configure your client id and client secret. You will also need to specify the redirect URI as well if you are going to share your client id with your Web application. Otherwise just use <code>myapp://redirect</code> as follows:</p>
 
 <pre><code>[CTGManager setClientID:@"MyAppClientIDxxxxxxx"];
 [CTGManager setClientSecret:@"MyAppClientSecretxxxxxxxxxxxxxxxxxxxxxxx"];
@@ -92,25 +93,25 @@
 </code></pre>
 </li>
 <li>
-<p>And assign your view controller as a delegate:</p>
+<p>Assign your view controller as a delegate:</p>
 
 <pre><code>[CTGManager setDelegate:self];
 </code></pre>
 </li>
 <li>
-<p><em>Optional:</em> You can disable the move and scale page:</p>
+<p>You can optionally disable the move and scale page:</p>
 
 <pre><code>[CTGManager setSkipMoveAndScale:YES];
 </code></pre>
 </li>
 <li>
-<p>Pass the image to the SDK:</p>
+<p>Pass the image to be used for case creation to the SDK:</p>
 
 <pre><code>[CTGManager setImage:[UIImage imageNamed:@"photo.jpg"]];
 </code></pre>
 </li>
 <li>
-<p>Finally present the CasetagramViewController:</p>
+<p>The final step is to present the CasetagramViewController:</p>
 
 <pre><code>UIViewController *vc = [CTGManager newCasetagramViewController];
 [self presentModalViewController:vc animated:YES];
@@ -120,23 +121,23 @@
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
-<li>Xcode 4.6 and iOS SDK 5.0 or above</li>
+<li>Xcode 4.6 and iOS SDK 6.0 or above</li>
 <li>iPhone, iPad and iOS Simulator are supported</li>
 <li>iOS 5.0 or above, retina display preferred</li>
 </ul><h2>
 <a name="sample-code" class="anchor" href="#sample-code"><span class="octicon octicon-link"></span></a>Sample Code</h2>
 
-<p>We have prepared a <a href="https://github.com/casetagram/casetagram-ios-sdk-sample">sample Xcode project</a> that integrated with the Casetagram iOS SDK. </p>
+<p>We have prepared a <a href="https://github.com/casetagram/casetagram-ios-sdk-sample">sample Xcode project</a> that has Casetagram iOS SDK integrated.</p>
 
 <h2>
 <a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
 
-<p>If you have any problem regarding the Casetagram iOS SDK, feel free to contact us at <a href="mailto:hello@casetagram.com">hello@casetagram.com</a></p>
+<p>If there is any problem regarding the Casetagram iOS SDK, feel free to contact us at <a href="mailto:hello@casetagram.com">hello@casetagram.com</a></p>
 
 <h2>
 <a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues?</h2>
 
-<p>You may submit issues on github: <a href="https://github.com/casetagram/casetagram-ios-sdk/issues">https://github.com/casetagram/casetagram-ios-sdk/issues</a></p>
+<p>You may submit on github any issues encountered: <a href="https://github.com/casetagram/casetagram-ios-sdk/issues">https://github.com/casetagram/casetagram-ios-sdk/issues</a></p>
       </section>
     </div>
     <footer>
