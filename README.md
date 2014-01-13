@@ -18,7 +18,8 @@ Add the SDK to your Xcode project
 	![sdkinstall_step3.png](http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step3.png)
 	
 4. Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:  
-    * CoreImage.framework
+	* Accelerate.framework
+	* CoreImage.framework
 	* ImageIO.framework
 	* MessageUI.framework
 	* MobileCoreServices.framework
@@ -76,13 +77,19 @@ Integrate with the SDK
 	[CTGManager setSkipMoveAndScale:YES];
 	```
 	
-6. Pass the image to be used for case creation to the SDK:
+6. And optionally give a pre-defined name for case created by the SDK:
+	
+	```
+	[CTGManager setCaseName:@"Created with MyApp"];
+	```
+	
+7. Pass the image to be used for case creation to the SDK:
 	
 	```
 	[CTGManager setImage:[UIImage imageNamed:@"photo.jpg"]];
 	```
 	
-7. The final step is to present the CasetagramViewController:
+8. The final step is to present the CasetagramViewController:
 	
 	```
 	UIViewController *vc = [CTGManager newCasetagramViewController];

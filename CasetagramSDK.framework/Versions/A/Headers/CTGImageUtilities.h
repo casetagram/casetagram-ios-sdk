@@ -40,6 +40,8 @@ typedef enum {
 + (UIImage *)processImage:(UIImage *)image targetSize:(CGSize)targetSize orientation:(UIImageOrientation)orientation;
 + (UIImage *)processImage:(UIImage *)image padToSize:(CGSize)targetSize backgroundColor:(UIColor *)color;
 + (UIImage *)processImage:(UIImage *)image cropToRect:(CGRect)rect;
++ (UIImage *)processImage:(UIImage *)image scaleAspectFillToSize:(CGSize)targetSize;
++ (UIImage *)processImage:(UIImage *)image scaleAspectFitToSize:(CGSize)targetSize backgroundColor:(UIColor *)bgColor;
 + (UIImage *)processImage:(UIImage *)image addWatermark:(UIImage *)watermarkImage position:(CTGImageWatermarkPositionType)positionType;
 
 #pragma mark -
@@ -69,5 +71,10 @@ typedef enum {
 #pragma mark Auto Enhance Image
 
 + (UIImage *)autoEnhanceImage:(UIImage *)image;
+
+#pragma mark -
+#pragma mark Gaussian Blur
+
++ (UIImage *)processImage:(UIImage *)image applyBlurWithRadius:(CGFloat)radius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)factor maskImage:(UIImage *)maskImage;
 
 @end
