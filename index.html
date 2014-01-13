@@ -47,6 +47,7 @@
 <p>Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:  </p>
 
 <ul>
+<li>Accelerate.framework</li>
 <li>CoreImage.framework</li>
 <li>ImageIO.framework</li>
 <li>MessageUI.framework</li>
@@ -102,6 +103,12 @@
 <p>You can optionally disable the move and scale page:</p>
 
 <pre><code>[CTGManager setSkipMoveAndScale:YES];
+</code></pre>
+</li>
+<li>
+<p>And optionally give a pre-defined name for case created by the SDK:</p>
+
+<pre><code>[CTGManager setCaseName:@"Created with MyApp"];
 </code></pre>
 </li>
 <li>
