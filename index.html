@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Casetagram iOS SDK by casetagram</title>
+    <title>Casetify, formerly Casetagram iOS SDK by casetify</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,7 +17,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Casetagram iOS SDK</h1>
+        <h1>Casetify, formerly Casetagram iOS SDK</h1>
         <p>create custom cases right from your app</p>
         <p class="view"><a href="https://github.com/casetagram/casetagram-ios-sdk">View the Project on GitHub <small>casetagram/casetagram-ios-sdk</small></a></p>
         <ul>
@@ -28,20 +28,20 @@
       </header>
       <section>
         <h1>
-<a name="casetagram-ios-sdk" class="anchor" href="#casetagram-ios-sdk"><span class="octicon octicon-link"></span></a>Casetagram iOS SDK</h1>
+<a name="casetagram-ios-sdk" class="anchor" href="#casetagram-ios-sdk"><span class="octicon octicon-link"></span></a>Casetify, formerly Casetagram iOS SDK</h1>
 
-<p>Casetagram is a social design service where you can create custom tech cases by using your Instagram, Facebook and directly uploaded photos. We turn your designs into high quality cases with our patent pending technology, then we print it and ship it to you. </p>
+<p>Casetify, formerly Casetagram is a social design service where you can create custom tech cases by using your Instagram, Facebook and directly uploaded photos. We turn your designs into high quality cases with our patent pending technology, then we print it and ship it to you. </p>
 
-<p>The Casetagram iOS SDK is a static framework that can be integrated into your iOS apps easily, adding the ability of making custom cases in just a few minutes.</p>
+<p>The Casetify, formerly Casetagram iOS SDK is a static framework that can be integrated into your iOS apps easily, adding the ability of making custom cases in just a few minutes.</p>
 
 <h2>
 <a name="add-the-sdk-to-your-xcode-project" class="anchor" href="#add-the-sdk-to-your-xcode-project"><span class="octicon octicon-link"></span></a>Add the SDK to your Xcode project</h2>
 
 <ol>
-<li><p>Drag both <code>CasetagramSDK.framework</code> and <code>CasetagramSDK.bundle</code> to your project.
+<li><p>Drag both <code>CasetifySDK.framework</code> and <code>CasetifySDK.bundle</code> to your project.
 <img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step1.png" alt="sdkinstall_step1.png"><img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step2.png" alt="sdkinstall_step2.png"></p></li>
-<li><p>Verify that <code>CasetagramSDK.framework</code> appears in the "Link Binary With Libraries" section in your target's Build Phases. If it does not, you can add it by dragging the <code>CasetagramSDK.framework</code> from your Project Navigator to the "Link Binary With Libraries" section.</p></li>
-<li><p>Verify that <code>CasetagramSDK.bundle</code> appears in the "Copy Bundle Resources" section in your target's Build Phases. If it does not, you can add it by dragging the <code>CasetagramSDK.bundle</code> from your Project Navigator to the "Copy Bundle Resources" section.
+<li><p>Verify that <code>CasetifySDK.framework</code> appears in the "Link Binary With Libraries" section in your target's Build Phases. If it does not, you can add it by dragging the <code>CasetifySDK.framework</code> from your Project Navigator to the "Link Binary With Libraries" section.</p></li>
+<li><p>Verify that <code>CasetifySDK.bundle</code> appears in the "Copy Bundle Resources" section in your target's Build Phases. If it does not, you can add it by dragging the <code>CasetifySDK.bundle</code> from your Project Navigator to the "Copy Bundle Resources" section.
 <img src="http://casetagram.github.io/casetagram-ios-sdk/images/sdkinstall_step3.png" alt="sdkinstall_step3.png"></p></li>
 <li>
 <p>Under the "Link Binary With Libraries" section in your target's Build Phases, press the plus (+) button. Add the following system frameworks:  </p>
@@ -67,27 +67,27 @@
 
 <ol>
 <li>
-<p>Import the <code>CasetagramSDK.h</code> header file:</p>
+<p>Import the <code>CasetifySDK.h</code> header file:</p>
 
-<pre><code>#import &lt;CasetagramSDK/CasetagramSDK.h&gt;
+<pre><code>#import &lt;CasetifySDK/CasetifySDK.h&gt;
 </code></pre>
 </li>
 <li>
 <p>Configure your client id and client secret. You will also need to specify the redirect URI as well if you are going to share your client id with your Web application. Otherwise just use <code>myapp://redirect</code> as follows:</p>
 
-<pre><code>[CTGManager setClientID:@"MyAppClientIDxxxxxxx"];
-[CTGManager setClientSecret:@"MyAppClientSecretxxxxxxxxxxxxxxxxxxxxxxx"];
-[CTGManager setRedirectURI:@"myapp://redirect"];
+<pre><code>[CTFManager setClientID:@"MyAppClientIDxxxxxxx"];
+[CTFManager setClientSecret:@"MyAppClientSecretxxxxxxxxxxxxxxxxxxxxxxx"];
+[CTFManager setRedirectURI:@"myapp://redirect"];
 </code></pre>
 </li>
 <li>
-<p>Implement the <code>CasetagramSDKDelegate</code> protocol methods:  </p>
+<p>Implement the <code>CasetifySDKDelegate</code> protocol methods:  </p>
 
-<pre><code>- (void)casetagramSDKOrderCompleted
+<pre><code>- (void)casetifySDKOrderCompleted
 {
     [self dismissModalViewControllerAnimated:YES];
 }
-- (void)casetagramSDKUserCancelled
+- (void)casetifySDKUserCancelled
 {
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -96,31 +96,31 @@
 <li>
 <p>Assign your view controller as a delegate:</p>
 
-<pre><code>[CTGManager setDelegate:self];
+<pre><code>[CTFManager setDelegate:self];
 </code></pre>
 </li>
 <li>
 <p>You can optionally disable the move and scale page:</p>
 
-<pre><code>[CTGManager setSkipMoveAndScale:YES];
+<pre><code>[CTFManager setSkipMoveAndScale:YES];
 </code></pre>
 </li>
 <li>
 <p>And optionally give a pre-defined name for case created by the SDK:</p>
 
-<pre><code>[CTGManager setCaseName:@"Created with MyApp"];
+<pre><code>[CTFManager setCaseName:@"Created with MyApp"];
 </code></pre>
 </li>
 <li>
 <p>Pass the image to be used for case creation to the SDK:</p>
 
-<pre><code>[CTGManager setImage:[UIImage imageNamed:@"photo.jpg"]];
+<pre><code>[CTFManager setImage:[UIImage imageNamed:@"photo.jpg"]];
 </code></pre>
 </li>
 <li>
-<p>The final step is to present the CasetagramViewController:</p>
+<p>The final step is to present the CasetifyViewController:</p>
 
-<pre><code>UIViewController *vc = [CTGManager newCasetagramViewController];
+<pre><code>UIViewController *vc = [CTFManager newCasetifyViewController];
 [self presentModalViewController:vc animated:YES];
 </code></pre>
 </li>
@@ -128,18 +128,18 @@
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
-<li>Xcode 4.6 and iOS SDK 6.0 or above</li>
+<li>Xcode 5.0 and iOS SDK 6.0 or above</li>
 <li>iPhone, iPad and iOS Simulator are supported</li>
 <li>iOS 5.0 or above, retina display preferred</li>
 </ul><h2>
 <a name="sample-code" class="anchor" href="#sample-code"><span class="octicon octicon-link"></span></a>Sample Code</h2>
 
-<p>We have prepared a <a href="https://github.com/casetagram/casetagram-ios-sdk-sample">sample Xcode project</a> that has Casetagram iOS SDK integrated.</p>
+<p>We have prepared a <a href="https://github.com/casetagram/casetagram-ios-sdk-sample">sample Xcode project</a> that has Casetify, formerly Casetagram iOS SDK integrated.</p>
 
 <h2>
 <a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
 
-<p>If there is any problem regarding the Casetagram iOS SDK, feel free to contact us at <a href="mailto:hello@casetagram.com">hello@casetagram.com</a></p>
+<p>If there is any problem regarding the Casetify, formerly Casetagram iOS SDK, feel free to contact us at <a href="mailto:hello@casetify.com">hello@casetify.com</a></p>
 
 <h2>
 <a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues?</h2>
@@ -148,7 +148,7 @@
       </section>
     </div>
     <footer>
-      <p>Project maintained by <a href="https://github.com/casetagram">casetagram</a></p>
+      <p>Project maintained by <a href="https://github.com/casetagram">casetify</a></p>
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
