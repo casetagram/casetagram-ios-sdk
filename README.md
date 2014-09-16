@@ -49,7 +49,7 @@ Integrate with the SDK
 	```
 	[CTFManager setClientID:@"MyAppClientIDxxxxxxx"];
 	[CTFManager setClientSecret:@"MyAppClientSecretxxxxxxxxxxxxxxxxxxxxxxx"];
-	[CTFManager setRedirectURI:@"myapp://redirect"];
+	[CTFManager setRedirectURI:@"http://xxxxxxxxxxx.com"];
 	```
 	
 3. Implement the `CasetifySDKDelegate` protocol methods:  
