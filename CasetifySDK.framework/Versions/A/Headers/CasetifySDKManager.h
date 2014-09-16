@@ -38,5 +38,6 @@
 
 - (UIViewController *)newCasetifyViewController;
 - (UIViewController *)newCasetagramViewController;
+- (void)setClientID:(NSString *)clientID;
 
 @end
